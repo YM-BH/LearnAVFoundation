@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6um-tW-6Ia">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="tj2-VK-JET">
+            <objects>
+                <navigationController id="6um-tW-6Ia" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="X6j-rr-Rr6">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="SUe-TD-WGP" kind="relationship" relationship="rootViewController" id="YK7-Hp-AL4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="taG-cn-7oY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-374" y="-116"/>
+        </scene>
+        <!--SpeechDemo-->
+        <scene sceneID="vJu-Vw-MR2">
+            <objects>
+                <viewController id="SUe-TD-WGP" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JJm-1b-F3k">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="中新经纬5月2日电 (万可义)随着西藏于5月1日发布2022年一季度经济运行情况，31省份一季度GDP数据已全部出炉。总量方面，粤苏鲁稳居前三；增速方面，23省份高于“全国线”，新疆表现最佳，增速达到7.0%。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZZ-WM-Sww">
+                                <rect key="frame" x="20" y="238" width="374" height="101.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JwN-1G-ZL7">
+                                <rect key="frame" x="166" y="383.5" width="82" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="开始朗读"/>
+                                <connections>
+                                    <action selector="speak" destination="SUe-TD-WGP" eventType="touchUpInside" id="S5t-nn-nSX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="t89-iT-QWE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GZZ-WM-Sww" firstAttribute="top" secondItem="t89-iT-QWE" secondAttribute="top" constant="150" id="4lH-Ed-izl"/>
+                            <constraint firstItem="t89-iT-QWE" firstAttribute="trailing" secondItem="GZZ-WM-Sww" secondAttribute="trailing" constant="20" id="DF9-yw-dMA"/>
+                            <constraint firstItem="JwN-1G-ZL7" firstAttribute="centerX" secondItem="JJm-1b-F3k" secondAttribute="centerX" id="PTq-i2-yzu"/>
+                            <constraint firstItem="GZZ-WM-Sww" firstAttribute="leading" secondItem="t89-iT-QWE" secondAttribute="leading" constant="20" id="QlD-Nd-INv"/>
+                            <constraint firstItem="JwN-1G-ZL7" firstAttribute="top" secondItem="GZZ-WM-Sww" secondAttribute="bottom" constant="44" id="qOC-2u-H96"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="SpeechDemo" id="iiT-tB-CIZ"/>
+                    <connections>
+                        <outlet property="contentLabel" destination="GZZ-WM-Sww" id="uqt-iT-345"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pFr-wE-tJd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="516" y="-117"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
